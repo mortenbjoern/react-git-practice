@@ -1,12 +1,13 @@
 {
   "name": "react-tutorial",
   "version": "0.1.0",
-  "homepage": "https://mortenbjoern.github.io/react-git-practice/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5"
   },
+  "homepage": "https://mortenbjoern.github.io/react-git-practice/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -23,13 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  ]
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
@@ -26,12 +26,15 @@ const FooterText = styled.p`
 	}
 `
 
-const Footer = ()  => (
-	<FooterContainer>
-		<FooterText><em>Side project by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/mortenbjoern">Morten Bjørn</a>.</em></FooterText>
-		<FooterText>Contribute on <a target="_blank" rel="noopener noreferrer" href="https://github.com">Github</a>.</FooterText>
-		<FooterText>v0.0.2 — 24.02.2019</FooterText>
-	</FooterContainer>
-);
-
+class Footer extends Component {
+	render () {
+		return (
+		<FooterContainer>
+			<FooterText><em>Side project by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/mortenbjoern">Morten Bjørn</a>.</em></FooterText>
+			<FooterText>Contribute on <a target="_blank" rel="noopener noreferrer" href="https://github.com">Github</a>.</FooterText>
+			<FooterText>v0.0.3 — 24.02.2019</FooterText>
+		</FooterContainer>
+		);
+	}
+}
 export default Footer;

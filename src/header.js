@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
@@ -36,17 +36,21 @@ const HeaderNav = styled.nav`
 	}
 `
 
-const Header = ()  => (
-	<HeaderContainer>
-		<HeaderTitle>Time management</HeaderTitle>
-		<HeaderNav>
-			<ul>
-				<li><a>Login <span role="img" aria-label="lock-icon">🔓</span></a></li>
-				<li><a>Feedback <span role="img" aria-label="speech-bubble">💬</span></a></li>
-				<li><a>Donate <span role="img" aria-label="coffee-icon">☕</span></a></li>
-			</ul>
-		</HeaderNav>
-	</HeaderContainer>
-);
+class Header extends Component {
+	render() {
+		return(
+			<HeaderContainer>
+				<HeaderTitle>Time management</HeaderTitle>
+				<HeaderNav>
+					<ul>
+						<li><a>Login <span role="img" aria-label="lock-icon">🔓</span></a></li>
+						<li><a>Feedback <span role="img" aria-label="speech-bubble">💬</span></a></li>
+						<li><a>Donate <span role="img" aria-label="coffee-icon">☕</span></a></li>
+					</ul>
+				</HeaderNav>
+			</HeaderContainer>
+		);
+	}
+}
 
 export default Header;

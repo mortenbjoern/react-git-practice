@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const ProjectsContainer = styled.div`
@@ -25,17 +25,34 @@ const ProjectsItems = styled.div`
 	}
 `
 
-const ProjectsList = ()  => (
-	<ProjectsContainer>
-		<ProjectsTitle>Projects</ProjectsTitle>
-		<ProjectsItems>
-			<ul>
-				<li>Test 1</li>
-				<li>Test 2</li>
-				<li>Test 3</li>
-			</ul>
-		</ProjectsItems>
-	</ProjectsContainer>
-);
+class ProjectList extends Component {
 
-export default ProjectsList;
+	constructor(props) {
+		super(props);
+
+		this.initalState = {
+			project: '',
+			hours: ''
+		};
+
+		this.state = this.initalState;
+	} 
+
+	render() {
+		return (
+			<ProjectsContainer>
+				<ProjectsTitle>Projects</ProjectsTitle>
+				<ProjectsItems>
+					<ul>
+						<li>Test 1</li>
+						<li>Test 2</li>
+						<li>Test 3</li>
+					</ul>
+				</ProjectsItems>
+			</ProjectsContainer>
+		);
+  	}
+}
+
+
+export default ProjectList;

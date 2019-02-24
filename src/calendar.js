@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const CalendarContainer = styled.section`
@@ -13,6 +13,9 @@ const CalendarRow = styled.div`
 	justify-content: flex-start;
 	width: 18%;
 	margin-right: 2%;
+	&:last-of-type {
+		margin-right: 0;
+	}
 `
 
 const CField = styled.div`
@@ -28,99 +31,103 @@ const CalendarTitle = styled.h2`
 	margin: 0;
 `
 
-const Calendar = i => (
-	<CalendarContainer>
-		<CalendarRow>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-		</CalendarRow>
-		<CalendarRow>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-		</CalendarRow>
-		<CalendarRow>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-		</CalendarRow>
-		<CalendarRow>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-		</CalendarRow>
-		<CalendarRow>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-			<CField></CField>
-		</CalendarRow>
-	</CalendarContainer>
-);
+class Calendar extends Component {
+	render() {
+		return (
+			<CalendarContainer>
+				<CalendarRow>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+				</CalendarRow>
+				<CalendarRow>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+				</CalendarRow>
+				<CalendarRow>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+				</CalendarRow>
+				<CalendarRow>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+				</CalendarRow>
+				<CalendarRow>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+					<CField></CField>
+				</CalendarRow>
+			</CalendarContainer>
+		);
+	}
+}
 
 export default Calendar;

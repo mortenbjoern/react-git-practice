@@ -3,6 +3,7 @@ import Header from './header';
 import Footer from './footer';
 import Calendar from './calendar';
 import ProjectsList from './project-list';
+import Stats from './stats';
 
 class App extends Component {
 
@@ -42,8 +43,8 @@ class App extends Component {
 						<Calendar />
 					</div>
 				</div>
-				<div className="">
-					{/* Stats */}
+				<div className="margin-bottom-large">
+					<Stats />
 				</div>
 				<div className="">
 					<Footer />

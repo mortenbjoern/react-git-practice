@@ -30,7 +30,7 @@ const Footer = ()  => (
 	<FooterContainer>
 		<FooterText><em>Side project by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/mortenbjoern">Morten Bjørn</a>.</em></FooterText>
 		<FooterText>Contribute on <a target="_blank" rel="noopener noreferrer" href="https://github.com">Github</a>.</FooterText>
-		<FooterText>v0.0.1 — 24.02.2019</FooterText>
+		<FooterText>v0.0.2 — 24.02.2019</FooterText>
 	</FooterContainer>
 );
 

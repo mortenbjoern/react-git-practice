@@ -1,13 +1,13 @@
 {
   "main.css": "/react-git-practice/static/css/main.260abc26.chunk.css",
-  "main.js": "/react-git-practice/static/js/main.0ca8b218.chunk.js",
-  "main.js.map": "/react-git-practice/static/js/main.0ca8b218.chunk.js.map",
+  "main.js": "/react-git-practice/static/js/main.74d14e42.chunk.js",
+  "main.js.map": "/react-git-practice/static/js/main.74d14e42.chunk.js.map",
   "runtime~main.js": "/react-git-practice/static/js/runtime~main.d8912df7.js",
   "runtime~main.js.map": "/react-git-practice/static/js/runtime~main.d8912df7.js.map",
-  "static/js/2.2dc996b5.chunk.js": "/react-git-practice/static/js/2.2dc996b5.chunk.js",
-  "static/js/2.2dc996b5.chunk.js.map": "/react-git-practice/static/js/2.2dc996b5.chunk.js.map",
+  "static/js/2.ef1d2319.chunk.js": "/react-git-practice/static/js/2.ef1d2319.chunk.js",
+  "static/js/2.ef1d2319.chunk.js.map": "/react-git-practice/static/js/2.ef1d2319.chunk.js.map",
   "index.html": "/react-git-practice/index.html",
-  "precache-manifest.05ca0a9fe0ffcd442da081159a5caadd.js": "/react-git-practice/precache-manifest.05ca0a9fe0ffcd442da081159a5caadd.js",
+  "precache-manifest.f9a87dea94612592d5ab59ff211614e1.js": "/react-git-practice/precache-manifest.f9a87dea94612592d5ab59ff211614e1.js",
   "service-worker.js": "/react-git-practice/service-worker.js",
   "static/css/main.260abc26.chunk.css.map": "/react-git-practice/static/css/main.260abc26.chunk.css.map"
 }

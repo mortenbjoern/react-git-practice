@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import Table from './table';
-import Form from './form';
+import Header from './header';
+import Footer from './footer';
+import Calendar from './calendar';
+import ProjectsList from './project-list';
 
 class App extends Component {
 
@@ -24,15 +26,28 @@ class App extends Component {
 
 	render() {
 
-		const { characters } = this.state;
+		//eslint-disable-next-line
+		{/* const { characters } = this.state; */}
 
 		return (
-			<div className="container">
-				<Table 
-				characterData={characters}
-				removeCharacter={this.removeCharacter}
-				/>
-				<Form handleSubmit={this.handleSubmit} />
+			<div className="full-container">
+				<div className="margin-bottom-large">
+					<Header className=""/>
+				</div>
+				<div className="flex-row margin-bottom-large">
+					<div className="flex-small flex-shrink">
+						<ProjectsList />
+					</div>
+					<div className="flex-small">
+						<Calendar />
+					</div>
+				</div>
+				<div className="">
+					{/* Stats */}
+				</div>
+				<div className="">
+					<Footer />
+				</div>
 			</div>
 		);
 	}

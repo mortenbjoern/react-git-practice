@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/react-git-practice/static/js/runtime~main.d8912df7.js"
   },
   {
-    "revision": "34faf669b7c1fa28a1a5",
-    "url": "/react-git-practice/static/js/main.34faf669.chunk.js"
+    "revision": "0ca8b218d13b569b5e3c",
+    "url": "/react-git-practice/static/js/main.0ca8b218.chunk.js"
   },
   {
     "revision": "2dc996b5e902e8d9bda6",
     "url": "/react-git-practice/static/js/2.2dc996b5.chunk.js"
   },
   {
-    "revision": "34faf669b7c1fa28a1a5",
+    "revision": "0ca8b218d13b569b5e3c",
     "url": "/react-git-practice/static/css/main.260abc26.chunk.css"
   },
   {
-    "revision": "7838518602c17ff8f77ad20edf6c7a73",
+    "revision": "18f2cf5ff09017c0b06004de6567b715",
     "url": "/react-git-practice/index.html"
   }
 ];

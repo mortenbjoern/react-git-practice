@@ -4,8 +4,8 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-scripts": "2.1.5",
     "styled-components": "^4.1.3"
   },

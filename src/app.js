@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Header from './header';
-import Footer from './footer';
-import Calendar from './calendar';
-import ProjectsList from './project-list';
-import Stats from './stats';
+import Header from './components/header/index.js';
+import Footer from './components/footer/index.js';
+import Calendar from './components/calendar/index.js';
+import ProjectsList from './components/project-list/index.js';
+import Stats from './components/stats/index.js';
 
 class App extends Component {
 
@@ -26,6 +26,21 @@ class App extends Component {
 	}
 
 	render() {
+
+		const projects = [
+		  {
+		    name: 'Reports',
+		  },
+		  {
+		    name: 'Website',
+		  },
+		  {
+		    name: 'App',
+		  },
+		  {
+		    name: 'Coordinator',
+		  },
+		]
 
 		//eslint-disable-next-line
 		{/* const { characters } = this.state; */}

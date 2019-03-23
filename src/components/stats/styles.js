@@ -4,13 +4,13 @@ export const StatsContainer = styled.div`
 	min-width: 20rem;
 `
 
-export const StatsTitle = styled.h2`
+export const Title = styled.h2`
 	display: block;
 	font-size: 24px;
 	margin: 0 0 1rem 0;
 `
 
-export const StatsItems = styled.div`
+export const Items = styled.div`
 	display: block;
 	& ul {
 		margin: 0;

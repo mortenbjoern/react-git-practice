@@ -6,9 +6,9 @@ class Footer extends Component {
 	render () {
 		return (
 		<Styled.FooterContainer>
-			<Styled.FooterText><em>Side project by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/mortenbjoern">Morten Bjørn</a>.</em></Styled.FooterText>
-			<Styled.FooterText>Contribute on <a target="_blank" rel="noopener noreferrer" href="https://github.com">Github</a>.</Styled.FooterText>
-			<Styled.FooterText>v0.0.3 — 24.02.2019</Styled.FooterText>
+			<Styled.Text><em>Side project by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/mortenbjoern">Morten Bjørn</a>.</em></Styled.Text>
+			<Styled.Text>Contribute on <a target="_blank" rel="noopener noreferrer" href="https://github.com">Github</a>.</Styled.Text>
+			<Styled.Text>v0.0.3 — 24.02.2019</Styled.Text>
 		</Styled.FooterContainer>
 		);
 	}

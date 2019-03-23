@@ -6,14 +6,14 @@ class Header extends Component {
 	render() {
 		return(
 			<Styled.HeaderContainer>
-				<Styled.HeaderTitle>Time management</Styled.HeaderTitle>
-				<Styled.HeaderNav>
+				<Styled.Title>Time management</Styled.Title>
+				<Styled.Nav>
 					<ul>
 						<li><a>Login <span role="img" aria-label="lock-icon">🔓</span></a></li>
 						<li><a>Feedback <span role="img" aria-label="speech-bubble">💬</span></a></li>
 						<li><a>Donate <span role="img" aria-label="coffee-icon">☕</span></a></li>
 					</ul>
-				</Styled.HeaderNav>
+				</Styled.Nav>
 			</Styled.HeaderContainer>
 		);
 	}

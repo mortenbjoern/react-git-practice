@@ -18,14 +18,14 @@ class Stats extends Component {
 	render() {
 		return (
 			<Styled.StatsContainer>
-				<Styled.StatsTitle>Stats</Styled.StatsTitle>
-				<Styled.StatsItems>
+				<Styled.Title>Stats</Styled.Title>
+				<Styled.Items>
 					<ul>
 						<li>Test 1</li>
 						<li>Test 2</li>
 						<li>Test 3</li>
 					</ul>
-				</Styled.StatsItems>
+				</Styled.Items>
 			</Styled.StatsContainer>
 		);
   	}

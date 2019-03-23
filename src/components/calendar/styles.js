@@ -6,7 +6,7 @@ export const CalendarContainer = styled.section`
 	justify-content: flex-start;
 `
 
-export const CalendarRow = styled.div`
+export const Row = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -17,15 +17,10 @@ export const CalendarRow = styled.div`
 	}
 `
 
-export const CField = styled.div`
+export const Cell = styled.div`
 	display: block;
 	border: 1px solid lightgrey;
 	border-radius: .2rem;
 	height: 36px;
 	margin-bottom: .2rem;
-`
-
-export const CalendarTitle = styled.h2`
-	display: block;
-	margin: 0;
 `

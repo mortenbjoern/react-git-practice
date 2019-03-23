@@ -7,7 +7,7 @@ export const FooterContainer = styled.footer`
 	align-items: center;
 `
 
-export const FooterText = styled.p`
+export const Text = styled.p`
 	display: block;
 	margin: 0;
 	padding: 0;

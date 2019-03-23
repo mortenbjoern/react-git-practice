@@ -21,15 +21,15 @@ class ProjectList extends Component {
 
 		return (
 			<Styled.ProjectsContainer>
-				<Styled.ProjectsTitle>Projects</Styled.ProjectsTitle>
-				<Styled.ProjectsItems>
+				<Styled.Title>Projects</Styled.Title>
+				<Styled.List>
 					<ul>
-						<Styled.ProjectsItem />
-						<Styled.ProjectsItem />
-						<Styled.ProjectsItem />
-						<Styled.ProjectsItem />
+						<Styled.Item></Styled.Item>
+						<Styled.Item></Styled.Item>
+						<Styled.Item></Styled.Item>
+						<Styled.Item></Styled.Item>
 					</ul>
-				</Styled.ProjectsItems>
+				</Styled.List>
 			</Styled.ProjectsContainer>
 		);
   	}

@@ -7,12 +7,12 @@ export const HeaderContainer = styled.header`
 	align-items: center;
 `
 
-export const HeaderTitle = styled.h1`
+export const Title = styled.h1`
 	display: block;
 	margin: 0;
 `
 
-export const HeaderNav = styled.nav`
+export const Nav = styled.nav`
 	display: block;
 	& ul {
 		margin: 0;

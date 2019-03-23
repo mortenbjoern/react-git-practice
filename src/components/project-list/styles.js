@@ -15,15 +15,14 @@ export const List = styled.div`
 	& ul {
 		margin: 0;
 		padding: 0;
-		& li {
-			list-style-type: none;
-			text-decoration: none;
-			margin: 0 0 .5rem 0;
-			padding: 0;
-		}
 	}
 `
 
 export const Item = styled.li`
-	
+	list-style-type: none;
+	text-decoration: none;
+	margin: 0 0 .5rem 0;
+	padding: 0;
+	color: ${props => props.add ? "grey" : "black"};
+	margin-top: ${props => props.add ? "1rem" : "inherit"};
 `

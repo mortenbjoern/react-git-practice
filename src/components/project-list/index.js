@@ -24,9 +24,9 @@ class ProjectList extends Component {
 				<Styled.Title>Projects</Styled.Title>
 				<Styled.List>
 					<ul>
-						<Styled.Item></Styled.Item>
-						<Styled.Item></Styled.Item>
-						<Styled.Item></Styled.Item>
+						<Styled.Item>Personal</Styled.Item>
+						<Styled.Item>Research</Styled.Item>
+						<Styled.Item add>Add new...</Styled.Item>
 						<Styled.Item></Styled.Item>
 					</ul>
 				</Styled.List>

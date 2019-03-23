@@ -7,29 +7,11 @@ import Stats from './components/stats/index.js';
 
 class App extends Component {
 
-	state = {
-		characters: []
-	};
-
-	removeCharacter = index => {
-		const { characters } = this.state;
-
-		this.setState ({
-			characters: characters.filter((characters,i) => {
-				return i !== index;
-			})
-		});
-	}
-
-	handleSubmit = character => {
-		this.setState({characters: [...this.state.characters, character]});
-	}
-
 	render() {
 
 		const projects = [
 		  {
-		    name: 'Reports',
+		    name: 'Reports'
 		  },
 		  {
 		    name: 'Website',
@@ -38,9 +20,9 @@ class App extends Component {
 		    name: 'App',
 		  },
 		  {
-		    name: 'Coordinator',
+		    name: 'Add news..',
 		  },
-		]
+		];
 
 		//eslint-disable-next-line
 		{/* const { characters } = this.state; */}
@@ -52,7 +34,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList />
+						<ProjectsList projectData={projects} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

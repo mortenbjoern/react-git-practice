@@ -1,38 +1,65 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import * as Styled from './styles.js';
+
+//React components
+const Unordered = (props) => { 
+    const list = props.projectData.map((projects, index) => {
+        return (
+          <li key={index}>{projects.name}</li>
+        );
+    });
+
+    return (
+    	<ul
+    		className={props.className}>
+    		{list}
+  		</ul>
+  	);
+};
+
+//Styled components
+const ProjectsContainer = styled.div`
+	min-width: 20rem;
+`;
+
+const Title = styled.h2`
+	display: block;
+	font-size: 32px;
+	margin: 0 0 1rem 0;
+`;
+
+const Container = styled.div`
+	display: block;
+`;
+
+const UnorderedList = styled(Unordered)`
+	margin: 0;
+	padding: 0;
+	& li {
+		list-style-type: none;
+		text-decoration: none;
+		margin: 0 0 .5rem 0;
+		padding: 0;
+		color: ${props => props.add ? "grey" : "black"};
+		margin-top: ${props => props.add ? "1rem" : "inherit"};
+	}
+`;
 
 class ProjectList extends Component {
 
-	constructor(props) {
-		super(props);
-
-		this.initalState = {
-			project: '',
-			hours: ''
-		};
-
-		this.state = this.initalState;
-	} 
-
 	render() {
 
-		const { projectName } = this.props;
+	const { projectData } = this.props;
 
 		return (
-			<Styled.ProjectsContainer>
-				<Styled.Title>Projects</Styled.Title>
-				<Styled.List>
-					<ul>
-						<Styled.Item>Personal</Styled.Item>
-						<Styled.Item>Research</Styled.Item>
-						<Styled.Item add>Add new...</Styled.Item>
-						<Styled.Item></Styled.Item>
-					</ul>
-				</Styled.List>
-			</Styled.ProjectsContainer>
+			<ProjectsContainer>
+				<Title>Projects</Title>
+				<Container>
+					<UnorderedList projectData={projectData} />
+				</Container>
+			</ProjectsContainer>
 		);
-  	}
+	}
 }
 
 

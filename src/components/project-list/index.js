@@ -2,10 +2,13 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 
 //React components
-const Unordered = (props) => { 
+const Unordered = props => { 
     const list = props.projectData.map((projects, index) => {
         return (
-          <li key={index}>{projects.name}</li>
+        	<div>
+	          <li key={index}>{projects.name}</li>
+	          <button onClick={() => props.removeProject(index)}>Delete</button>
+          </div>
         );
     });
 
@@ -49,13 +52,13 @@ class ProjectList extends Component {
 
 	render() {
 
-	const { projectData } = this.props;
+	const { projectData, removeProject } = this.props
 
 		return (
 			<ProjectsContainer>
 				<Title>Projects</Title>
 				<Container>
-					<UnorderedList projectData={projectData} />
+					<UnorderedList projectData={projectData} removeProject={removeProject} />
 				</Container>
 			</ProjectsContainer>
 		);

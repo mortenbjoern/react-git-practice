@@ -7,9 +7,8 @@ import Stats from './components/stats/index.js';
 
 class App extends Component {
 
-	render() {
-
-		const projects = [
+	state = {
+		projects: [
 		  {
 		    name: 'Reports'
 		  },
@@ -22,10 +21,22 @@ class App extends Component {
 		  {
 		    name: 'Add news..',
 		  },
-		];
+		]
+	};
 
-		//eslint-disable-next-line
-		{/* const { characters } = this.state; */}
+	removeProject = index => {
+	  const { projects } = this.state;
+
+	  this.setState({
+		    projects: projects.filter((project, i) => {
+		      return i !== index
+		    }),
+		  })
+	}
+
+	render() {
+
+		const { projects } = this.state
 
 		return (
 			<div className="full-container">
@@ -34,7 +45,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList projectData={projects} />
+						<ProjectsList projectData={projects} removeProject={this.removeProject} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

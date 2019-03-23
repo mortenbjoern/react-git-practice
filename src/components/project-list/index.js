@@ -1,33 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-
-const ProjectsContainer = styled.div`
-	min-width: 20rem;
-`
-
-const ProjectsTitle = styled.h2`
-	display: block;
-	font-size: 32px;
-	margin: 0 0 1rem 0;
-`
-
-const ProjectsItems = styled.div`
-	display: block;
-	& ul {
-		margin: 0;
-		padding: 0;
-		& li {
-			list-style-type: none;
-			text-decoration: none;
-			margin: 0 0 .5rem 0;
-			padding: 0;
-		}
-	}
-`
-
-const ProjectsItem = styled.li`
-	
-`
+import * as Styled from './styles.js';
 
 class ProjectList extends Component {
 
@@ -47,17 +20,17 @@ class ProjectList extends Component {
 		const { projectName } = this.props;
 
 		return (
-			<ProjectsContainer>
-				<ProjectsTitle>Projects</ProjectsTitle>
-				<ProjectsItems>
+			<Styled.ProjectsContainer>
+				<Styled.ProjectsTitle>Projects</Styled.ProjectsTitle>
+				<Styled.ProjectsItems>
 					<ul>
-						<ProjectsItem />
-						<ProjectsItem />
-						<ProjectsItem />
-						<ProjectsItem />
+						<Styled.ProjectsItem />
+						<Styled.ProjectsItem />
+						<Styled.ProjectsItem />
+						<Styled.ProjectsItem />
 					</ul>
-				</ProjectsItems>
-			</ProjectsContainer>
+				</Styled.ProjectsItems>
+			</Styled.ProjectsContainer>
 		);
   	}
 }

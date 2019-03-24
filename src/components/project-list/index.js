@@ -2,13 +2,10 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 
 //React components
-const Unordered = props => { 
+const GenerateProjects = (props) => { 
     const list = props.projectData.map((projects, index) => {
         return (
-        	<div>
-	          <li key={index}>{projects.name}</li>
-	          <button onClick={() => props.removeProject(index)}>Delete</button>
-          </div>
+	        	<li key={index}>{projects.name}<span onClick={() => props.removeProject(index)}> -</span></li>
         );
     });
 
@@ -35,7 +32,7 @@ const Container = styled.div`
 	display: block;
 `;
 
-const UnorderedList = styled(Unordered)`
+const Projects = styled(GenerateProjects)`
 	margin: 0;
 	padding: 0;
 	& li {
@@ -48,18 +45,38 @@ const UnorderedList = styled(Unordered)`
 	}
 `;
 
+const Input = styled.input`
+	margin-top: 1rem;
+	border: 0px;
+	font-size: 1rem;
+	padding: 0;
+	border-radius: .4rem;
+	transition: padding .1s ease-in-out;
+	&:focus {
+		padding: .5rem;
+		transition: padding .1s ease-in-out;
+		background-color: #efefef;
+		outline: 0px;
+		outline-offset: 0px;
+	}
+
+`
+
 class ProjectList extends Component {
 
 	render() {
 
-	const { projectData, removeProject } = this.props
+	const { projectData, removeProject, addProject } = this.props
 
 		return (
 			<ProjectsContainer>
 				<Title>Projects</Title>
-				<Container>
-					<UnorderedList projectData={projectData} removeProject={removeProject} />
-				</Container>
+				<Projects projectData={projectData} removeProject={removeProject} addProject={addProject} />
+				<Input
+					type="text"
+					name="name"
+					placeholder="Add project..."
+				 />
 			</ProjectsContainer>
 		);
 	}

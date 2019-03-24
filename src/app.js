@@ -9,18 +9,12 @@ class App extends Component {
 
 	state = {
 		projects: [
-		  {
-		    name: 'Reports'
-		  },
-		  {
-		    name: 'Website',
-		  },
-		  {
-		    name: 'App',
-		  },
-		  {
-		    name: 'Add news..',
-		  },
+		{
+			name: 'Website',
+		},
+		{
+			name: 'App',
+		},
 		]
 	};
 
@@ -34,6 +28,10 @@ class App extends Component {
 		  })
 	}
 
+	addProject = () => {
+	  alert("test");
+	}
+
 	render() {
 
 		const { projects } = this.state
@@ -45,7 +43,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList projectData={projects} removeProject={this.removeProject} />
+						<ProjectsList addProject={this.addProject} projectData={projects} removeProject={this.removeProject} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

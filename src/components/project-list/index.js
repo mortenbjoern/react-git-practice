@@ -84,18 +84,18 @@ class ProjectList extends Component {
 	  	})
 	}
 
+	clearField = e => {
+		e.target.value = '';
+	}
+
 	submitForm = () => {
 	  	this.props.handleSubmit(this.state)
 	  	this.setState(this.initialState)
 	}
 
-	clearField = e => {
-		e.value = '';
-	}
-
 	render() {
 
-	const { projectData, removeProject, handleSubmit } = this.props
+	const { projectData, removeProject, handleSubmit, clearField } = this.props
 
 		return (
 			<ProjectsContainer>
@@ -105,7 +105,7 @@ class ProjectList extends Component {
 					type="text"
 					name="name"
 					placeholder="Add project..."
-					clearField={this.clearField}
+					onFocus={this.clearField}
 					onChange={this.handleChange}
 				 />
 				 <Submit

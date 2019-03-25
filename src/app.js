@@ -46,7 +46,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} />
+						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} clearField={this.clearField} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

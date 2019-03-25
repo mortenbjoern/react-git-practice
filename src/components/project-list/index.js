@@ -46,37 +46,72 @@ const Projects = styled(GenerateProjects)`
 `;
 
 const Input = styled.input`
+	box-sizing: border-box;
+	display: block;
 	margin-top: 1rem;
 	border: 0px;
 	font-size: 1rem;
-	padding: 0;
-	border-radius: .4rem;
-	transition: padding .1s ease-in-out;
+	width: 75%;
 	&:focus {
-		padding: .5rem;
-		transition: padding .1s ease-in-out;
-		background-color: #efefef;
+		border-bottom: 1px solid #efefef;
 		outline: 0px;
 		outline-offset: 0px;
 	}
+`;
 
-`
+const Submit = styled.button`
+
+`;
 
 class ProjectList extends Component {
 
+	constructor(props) {
+	    super(props)
+
+	    this.initialState = {
+	      	name: '',
+	      	color: '',
+	    }
+
+		this.state = this.initialState
+  	}
+
+  	handleChange = event => {
+	 	const { name, value } = event.target
+
+	  	this.setState({
+	    	[name]: value,
+	  	})
+	}
+
+	submitForm = () => {
+	  	this.props.handleSubmit(this.state)
+	  	this.setState(this.initialState)
+	}
+
+	clearField = e => {
+		e.value = '';
+	}
+
 	render() {
 
-	const { projectData, removeProject, addProject } = this.props
+	const { projectData, removeProject, handleSubmit } = this.props
 
 		return (
 			<ProjectsContainer>
 				<Title>Projects</Title>
-				<Projects projectData={projectData} removeProject={removeProject} addProject={addProject} />
+				<Projects projectData={projectData} removeProject={removeProject} />
 				<Input
 					type="text"
 					name="name"
 					placeholder="Add project..."
+					clearField={this.clearField}
+					onChange={this.handleChange}
 				 />
+				 <Submit
+				 	onClick={this.submitForm}>
+					Submit 		
+			 	</Submit>
 			</ProjectsContainer>
 		);
 	}

@@ -15,6 +15,9 @@ class App extends Component {
 		{
 			name: 'App',
 		},
+		{
+			name: 'Reports',
+		},
 		]
 	};
 
@@ -28,8 +31,8 @@ class App extends Component {
 		  })
 	}
 
-	addProject = () => {
-	  alert("test");
+	handleSubmit = project => {
+	  	this.setState({ projects: [...this.state.projects, project] })
 	}
 
 	render() {
@@ -43,7 +46,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList addProject={this.addProject} projectData={projects} removeProject={this.removeProject} />
+						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

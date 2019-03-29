@@ -8,17 +8,7 @@ import Stats from './components/stats/index.js';
 class App extends Component {
 
 	state = {
-		projects: [
-		{
-			name: 'Website',
-		},
-		{
-			name: 'App',
-		},
-		{
-			name: 'Reports',
-		},
-		]
+		projects: []
 	};
 
 	removeProject = index => {
@@ -46,7 +36,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} clearField={this.clearField} />
+						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} generateColor={this.generateColor} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

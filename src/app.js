@@ -36,7 +36,7 @@ class App extends Component {
 				</div>
 				<div className="flex-row margin-bottom-large">
 					<div className="flex-small flex-shrink">
-						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} generateColor={this.generateColor} />
+						<ProjectsList projectData={projects} handleSubmit={this.handleSubmit} removeProject={this.removeProject} />
 					</div>
 					<div className="flex-small">
 						<Calendar />

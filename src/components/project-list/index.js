@@ -5,7 +5,12 @@ import styled from 'styled-components';
 const GenerateProjects = (props) => { 
     const list = props.projectData.map((projects, index) => {
         return (
+        	<div>
+        		<svg height="10" width="10">
+  					<circle cx="5" cy="5" r="5" fill={projects.color} />>
+				</svg>
 	        	<li key={index}>{projects.name}<span onClick={() => props.removeProject(index)}> -</span></li>
+        	</div>
         );
     });
 
@@ -36,13 +41,23 @@ const Row = styled.div`
 const Projects = styled(GenerateProjects)`
 	margin: 0;
 	padding: 0;
-	& li {
-		list-style-type: none;
-		text-decoration: none;
-		margin: 0 0 .5rem 0;
-		padding: 0;
-		color: ${props => props.add ? "grey" : "black"};
-		margin-top: ${props => props.add ? "1rem" : "inherit"};
+	position: relative;
+	right: 20px;
+	& div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		& li {
+			list-style-type: none;
+			text-decoration: none;
+			margin: 0 0 .5rem 0;
+			padding: 0;
+			color: ${props => props.add ? "grey" : "black"};
+			margin-top: ${props => props.add ? "1rem" : "inherit"};
+		}
+		& svg {
+			margin: 0 10px .5rem 0;
+		}
 	}
 `
 
@@ -64,16 +79,24 @@ const Submit = styled.button`
 	background-color: green;
 `
 
+//create a class called ProjectList
 class ProjectList extends Component {
 
+	//'The constructor method is a special method for creating and initializing an object created within a class.'
+	//For more, see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor
+	//We pass the props from App.js to the constructor
 	constructor(props) {
+
+		//'The super keyword is used to access and call functions on an object's parent.'
+		//For more, see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super
 	    super(props)
 
+		//Create an object in the constructor that resets the state
 	    this.initialState = {
 	      	name: '',
 	      	color: '',
 	    }
-
+		
 		this.state = this.initialState
   	}
 
@@ -103,7 +126,7 @@ class ProjectList extends Component {
 		//takes updated props from ProjectList and parses to handleSubmit in App
 	  	this.props.handleSubmit(this.state)
 
-	  	//resets ProjectList state
+	  	//resets ProjectList state, see constructor
 	  	this.setState(this.initialState)
 
 	  	//reset the input field value
@@ -112,7 +135,8 @@ class ProjectList extends Component {
 
 	render() {
 
-	const { projectData, removeProject, handleSubmit, clearField, generateColor } = this.props
+	//Set properties passed from App to local props
+	const { projectData, removeProject, handleSubmit } = this.props
 
 		return (
 			<ProjectsContainer>
